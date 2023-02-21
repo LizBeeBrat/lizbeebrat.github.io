@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="pingback" href="https: //domainname.com/xmlrpc.php" />
         <title>LizBeeBrat</title>
@@ -55,14 +54,35 @@
         <link rel="apple-touch-icon-precomposed" href="images/icon/cropped-cropped-favicon-1-1-180x180.png" />
         <meta name="msapplication-TileImage" content="images/icon/cropped-cropped-favicon-1-1-270x270.png" />
         <!--complete list of meta tags at - https://gist.github.com/lancejpollard/1978404 -->
-    </head>
-    <body>
+    
+        <style>
+            img {
+                   max-width: 99% !important;
+                   max-height: 99% !important;
+                }
+     </style>
+     <script>
+            function FitImagesToScreen() {
+               var images = document.getElementsByTagName('img');
+               if(images.length > 0){
+                  for(var i=0; i < images.length; i++){
+                      if(images[i].width >= (window.innerWidth - 10)){
+                          images[i].style.width = 'auto';
+                        }
+                     }
+                  }
+            }
+      </script>
+</head>
+<body onload='FitImagesToScreen()'>
+    { background-color: #efe2fa; }
+    
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
 
-        <img class="image" src="images/header.PNG">
+       <center><img class="image" src="images/header.PNG"></center> 
 
 
 
